@@ -4,3 +4,6 @@ home: https://postmarketos.org/ wiki: https://wiki.postmarketos.org/wiki/Main_Pa
 social: https://fosstodon.org/@postmarketOS
 
 blog: https://postmarketos.org/blog
+
+# install:
+pmbootstrap https://wiki.postmarketos.org/wiki/Pmbootstrap
