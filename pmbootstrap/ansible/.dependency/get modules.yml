@@ -32,6 +32,7 @@
 
   - name: link Roles
     ansible.builtin.file:
+      state: link
       src: "{{playbook_dir}}/repo/{{item}}"
       dest: "{{ansible_dir.stdout}}/roles/depends/"
     loop: "{{roles}}"
