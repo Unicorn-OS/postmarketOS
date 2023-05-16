@@ -1,5 +1,0 @@
-if [[ ! -d source.RPMFusion ]];then
-	git clone https://github.com/Unicorn-OS/ADB
-fi
-
-ln -srf ADB/ansible/roles/ADB ../roles/
