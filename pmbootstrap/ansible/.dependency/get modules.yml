@@ -28,7 +28,7 @@
 
   - name: Create role/depends directory
     ansible.builtin.file:
-      path: "{{ansible_dir}}/role/depends"
+      path: "{{ansible_dir}}/role/.depends"
       state: directory
 
   # - name: print
@@ -39,5 +39,5 @@
     ansible.builtin.file:
       state: link
       src: "{{playbook_dir}}/repo/{{item}}"
-      dest: "{{ansible_dir.stdout}}/roles/depends/"
+      dest: "{{ansible_dir.stdout}}/roles/.depends/"
     loop: "{{roles}}"
