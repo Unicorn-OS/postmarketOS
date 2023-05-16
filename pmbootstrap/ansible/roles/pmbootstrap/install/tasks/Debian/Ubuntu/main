@@ -1,0 +1,9 @@
+---
+#from: https://wiki.postmarketos.org/wiki/Pmbootstrap
+
+- name: Install  pmbootstrap package
+  ansible.builtin.apt:
+    pkg:
+    - pmbootstrap
+  become: true
+  when: source == "os-package"

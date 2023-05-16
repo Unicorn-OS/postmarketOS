@@ -1,0 +1,7 @@
+---
+- hosts: local #, fedora, ubuntu
+  vars:
+    somevar: "value"
+
+  roles:
+  - pmbootstrap/install
