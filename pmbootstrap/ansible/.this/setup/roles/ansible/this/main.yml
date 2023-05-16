@@ -1,0 +1,4 @@
+---
+- name:
+  debug:
+    msg: "{{playbook_dir}}"

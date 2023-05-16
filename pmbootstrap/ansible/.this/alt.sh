@@ -29,15 +29,37 @@ verify_ansible_and_run(){
     cd ~-
 }
 
+setup_ansible(){
+    cd ansible/.this
+    ansible-playbook init.yml
+}
+
+setup_inventory(){
+    # Copy Inventory/.example to $new_name if it doesn't exist
+    new_name="test"
+    echo "inventory/$new_name" >.this/.gitignore
+
+    cd .this/inventory/
+    [ ! -d "$new_name" ] && cp -r .example $new_name
+    # help message
+    echo "Inventory copied to \`.this/inventory/$new_name\`"; echo
+    cd ~-
+}
+
+setup_ansible_cfg(){
+    # We can make this more complex in the future! But for now just symlink:
+    ln -srf .this/ansible.cfg .
+    echo setup ansible.cfg;echo
+}
+
+setup_dependencies(){
+    ansible-playbook
+}
 
 setup_everything(){
-    cd .this/setup
-    ansible-playbook setup.yml
-    echo '''
     setup_inventory
     setup_ansible_cfg
     setup_dependencies
-    '''
 }
 
 run_for_first_time(){

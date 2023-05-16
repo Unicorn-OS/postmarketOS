@@ -3,5 +3,6 @@
   gather_facts: true
 
   roles:
-  - dependencies
-  - update
+  - ansible
+  # - dependencies
+  # - update
