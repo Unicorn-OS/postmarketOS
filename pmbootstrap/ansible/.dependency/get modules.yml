@@ -26,6 +26,11 @@
     ansible.builtin.shell: "dirname {{playbook_dir}}"
     register: ansible_dir
 
+  - name: Create role/depends directory
+    ansible.builtin.file:
+      path: "{{ansible_dir}}/role/depends"
+      state: directory
+
   # - name: print
   #   debug:
   #     msg: "Hello {{this_ansible.stdout}}"
