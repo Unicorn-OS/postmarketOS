@@ -2,3 +2,9 @@
 - name:
   debug:
     msg: "{{playbook_dir}}"
+
+# - name: setup ansible.cfg
+
+# - name: link ansible.sh to $Project_home
+
+# - name: copy Inventory .example

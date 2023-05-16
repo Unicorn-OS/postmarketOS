@@ -33,11 +33,6 @@ verify_ansible_and_run(){
 setup_everything(){
     cd .this/setup
     ansible-playbook setup.yml
-    echo '''
-    setup_inventory
-    setup_ansible_cfg
-    setup_dependencies
-    '''
 }
 
 run_for_first_time(){
@@ -46,10 +41,6 @@ run_for_first_time(){
 
     # setup_ansible_parent_dir
     ln -srf ansible.sh ../../
-    # Run in $Project_home as normal
-    cd ../../
-    echo Running in $Project_home
-    run_in_Project_home
 }
 
 run_in_Project_home(){
