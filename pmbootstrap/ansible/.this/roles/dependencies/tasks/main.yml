@@ -1,0 +1,9 @@
+---
+
+- name: get ansible dir
+  ansible.builtin.shell: "dirname {{playbook_dir}}"
+  register: ansible_dir
+
+- name:
+  debug:
+    msg: "At {{playbook_dir}}"

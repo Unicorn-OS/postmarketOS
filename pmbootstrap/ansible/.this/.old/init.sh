@@ -6,14 +6,6 @@ cd -
 fi
 }
 
-setup_inventory(){
-echo "inventory/test" >.this/.gitignore
-
-# Copy .example to test if it doesn't exist
-cd .this/inventory/
-[ ! -d "test" ] && cp -r .example test
-cd -
-}
 
 update(){
 if [ -f "update.yml" ]; then
