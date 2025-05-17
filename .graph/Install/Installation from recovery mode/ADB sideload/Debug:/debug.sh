@@ -1,3 +1,6 @@
+# Kill old server
+adb kill-server
+
 # Check Device Status
 adb devices
 
