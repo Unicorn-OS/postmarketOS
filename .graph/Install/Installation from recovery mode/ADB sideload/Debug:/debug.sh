@@ -6,3 +6,6 @@ adb devices
 
 # Test Connection
 adb -P 5038 wait-for-usb-sideload
+
+# Try()
+pmbootstrap flasher --method=adb sideload
