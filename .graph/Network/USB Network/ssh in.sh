@@ -1,4 +1,7 @@
-# Doc: https://wiki.postmarketos.org/wiki/USB_Network
+# Doc:
+Connecting: https://wiki.postmarketos.org/wiki/USB_Network
+
+SSH Key: https://postmarketos.org/ssh-key-glob
 
 ```
 connect(){
